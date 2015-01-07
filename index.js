@@ -32,7 +32,7 @@ var defaults = {
   //可选: css, less, sass, scss or stylus [css]
   processor: 'css',     //css输出格式，若无则无输入
   template: null,       //样式模板，会覆盖processor选项(要求必须mustache格式的模板)
-  retina: false,        //同时生产视网膜和标准的精灵(src必须包含是网络)
+  retina: false,        //同时生产视网膜和标准的精灵(src必须包含视网膜图标，会自动压缩产生对应标准尺寸)
   //可选: 指定引擎 (auto, phantomjs, canvas, gm, pngsmith, pixelsmith)
   engine: 'pixelsmith', //压缩图片使用的引擎
   //可选算法：top-down  left-right  diagonal  alt-diagonal  binary-tree

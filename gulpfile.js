@@ -35,7 +35,7 @@ var sprite_files = './test/icons/*/*/16.png',
 
 // generate sprite.png and _sprite.scss
 gulp.task('sprite', function () {
-  return gulp.src(fixtures_files)
+  return gulp.src(test_files)
     .pipe(sprite({
       src: null,
       out: 'css',
@@ -46,7 +46,7 @@ gulp.task('sprite', function () {
       cssPath: '../images',
       processor: 'css',
       //template: null,             //'scss.mustache'
-      retina: true,
+      //retina: true,
       algorithm: 'binary-tree',     //binary-tree
       //retina: false,
       //background: '#FFFFFF',
