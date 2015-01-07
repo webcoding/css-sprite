@@ -32,12 +32,13 @@ var defaults = {
   //可选: css, less, sass, scss or stylus [css]
   processor: 'css',     //css输出格式，若无则无输入
   template: null,       //样式模板，会覆盖processor选项(要求必须mustache格式的模板)
+  //相对长度单位rem：相对于根元素(即html元素)font-size计算值的倍数
+  rem: 0,               //TODO：设置精灵的定位单位为相对长度单位rem
   retina: false,        //同时生产视网膜和标准的精灵(src必须包含视网膜图标，会自动压缩产生对应标准尺寸)
   //可选: 指定引擎 (auto, phantomjs, canvas, gm, pngsmith, pixelsmith)
-  engine: 'pixelsmith', //压缩图片使用的引擎
+  engine: 'pixelsmith', //TODO：压缩图片使用的引擎
   //可选算法：top-down  left-right  diagonal  alt-diagonal  binary-tree
   algorithm: 'top-down', //生成图片使用的布局算法[默认top-down]
-
   background: '#FFFFFF', //背景，默认#FFFFFF
   opacity: 0,            //透明度(0-100) 默认png时为0 jpg时为100
   margin: 0              //精灵间隔[4]
