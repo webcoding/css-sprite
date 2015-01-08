@@ -1,0 +1,36 @@
+{
+  // Default options
+  'functions': true
+  //@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+}
+
+{{#sprite}}
+{{class}} {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url('{{{escaped_image}}}');
+  /*background-size: 5rem 13rem;*/
+}
+{{/sprite}}
+
+{{#retina}}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  {{class}} {
+    background-image: url('{{{escaped_image}}}');
+    //background-size: {{px.total_width}} {{px.total_height}};
+  }
+}
+{{/retina}}
+
+{{#items}}
+._icon-{{name}}:before { background-position: {{px.offset_x}} {{px.offset_y}}; }
+{{/items}}
+
+{{#options.functions}}
+
+{{/options.functions}}
+
+
+

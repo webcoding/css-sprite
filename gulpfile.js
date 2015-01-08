@@ -15,20 +15,10 @@ var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var sprite = require('./index');
 
-// 自定义方法 sprite.create(options, cb);
-// sprite.create({
-//     'size': 16,
-//     'unit': 'rem',
-//     'concatName': 'icons'
-//   },function(){
-
-//   }
-// );
-
 sprite = sprite.stream;
 
 // 定义变量
-var sprite_files = './test/icons/*/*/16.png',
+var sprite_files = './test/icons/*/*/*@2x.png',
     test_files = './test/sprite/*.png',
     fixtures_files = './test/fixtures/*.png',
     output_path = './test/dist/';
@@ -42,10 +32,15 @@ gulp.task('sprite', function () {
       prefix: 'icon',
       name: '_icons',
       style: '_icons.css',         //'_icons.scss',
+      // spriteInfo: {
+      //   styleNameReg: '',
+      //   iconAreaSize: '',
+      //   styleType: ''
+      // },
       format: 'png',
       cssPath: '../images',
       processor: 'css',
-      //template: null,             //'scss.mustache'
+      //template: 'scss.template.mustache',             //'scss.mustache'
       //retina: true,
       algorithm: 'binary-tree',     //binary-tree
       //retina: false,

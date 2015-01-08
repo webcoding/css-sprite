@@ -27,6 +27,7 @@ var defaults = {
   name: 'sprite',       //精灵名称，不包含扩展名[sprite]
   prefix: '',           //css中class的前缀名(不包含.)[icon]
   style: null,          //输出的样式名，如果省略则CSS写入
+  filesName: false,     //以文件夹命名精灵样式名
   format: 'png',        //输出图片格式，默认png
   cssPath: '../images', //css中精灵路径(相对于css样式或使用绝对路径)[../images]
   //可选: css, less, sass, scss or stylus [css]
