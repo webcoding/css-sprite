@@ -1,6 +1,6 @@
 {
   "name": "css-sprites-extend",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "css sprite generator base on css-sprite, extend unit(rem)",
   "license": "MIT",
   "repository": {
